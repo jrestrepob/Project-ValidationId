@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>¡Web Generica!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header"> 
+        <img src="./assets/img/SURA_SEGUROS_logotipo_unatinta_azul_positivo.png" alt="">
+    </div>
+
+    <div class="container" id="container">
+        <div class="inputs" id="inputs">
+            <h1>Consultar por identificación</h1>
+            <label for="tipo-identificacion">Tipo de identificación:</label>
+            <select name="" id="tipo-identificacion">
+                <option value="" disabled> Tipo </option>
+                <option value="Cedula">Cédula de extranjería</option>
+                <option style="display:none;" value="1" id="cedulaBh">1</option>
+                <option style="display:none;" value="C" id="cedulaSalesforce">C</option>
+                <option value="P">Pasaporte</option>
+                <option value="N">NIT</option>
+            </select>
+            <label for="numero-identificacion">Número de identificación:<span>*</span> </label>
+            <input type="text" id="numero-identificacion" placeholder="Numero de identificación" required>
+            <p>Autorizo el uso de mi información personal de acuerdo con la política de tratamiento de datos personales
+            </p>
+            <button id="btnConsultar">Consultar</button>
+            <span id="mensaje-error" class="error"></span><br><br>
+        </div>
+
+    </div>
+    <div class="navContainer" id="navContainer"> 
+        <div class="nav" id="nav">
+            <div class="saludoContainer">
+                <p class="saludo">"¡Hola! Para iniciar tu consulta, por favor selecciona uno de los siguientes aplicativos:</p>
+                <div class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#" class="bh" id="bhBtn">BH</a>
+                        </li>
+                        <li>
+                            <a href="#" class="salesforce" id="salesforceBtn">Salesforce</a>
+                        </li>
+                        <li>
+                            <a href="#" class="diogenes" id="diogenesBtn">Diogenes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            
+
+            <div class="btnVolver" id="btnVolver">
+                <button id="btnVolver">Volver</button>
+            </div>
+        </div>
+
+        <div class="area" id="area">
+            <div class="containerBh" id="containerBh">
+                <div class="consultarAfiliadoExtendido">
+                    <table id="info-afiliadoExtendido">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Afiliado Extendido</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="consultarAfiliado">
+                    <table id="info-afiliado">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Afiliado</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="consultarEmpleador">
+                    <table id="info-empleador">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Empleador</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="consultarGrupoFamiliar">
+                    <h1>Afiliados:</h1>
+                    <table id="info-grupoFamiliar">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Grupo Familiar</td>
+                        </tr>
+                    </table>
+                    <div class="navegacion">
+                        <button id="anterior-btn-grupoFamiliar">Anterior</button>
+                        <button id="siguiente-btn-grupoFamiliar">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerSalesforce" id="containerSalesforce">
+                <div class="consultarCliente">
+                    <table id="info-cliente">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Cliente</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="consultarVinculaciones">
+                    <h1>Registros</h1>
+                    <table id="info-vinculaciones">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Vinculaciones</td>
+                        </tr>
+                    </table>
+                    <div class="navegacion">
+                        <button id="anterior-btn-vinculaciones">Anterior</button>
+                        <button id="siguiente-btn-vinculaciones">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerDiogenes" id="containerDiogenes">
+                <div class="consultarCliente">
+                    <table id="info-consultas">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Cliente</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="consultarVinculaciones">
+                    <h1>Registros:</h1>
+                    <table id="info-variaciones">
+                        <tr class="fila-titulo">
+                            <td colspan="2">Vinculaciones</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="spinner"></div>
+    <div id="successMessage">
+        <h3>Datos no encontrados</h3>
+    </div>
+
+    <div class="footer">
+        <p class="text-footer">Copyright © 2024. Todos los derechos reservados |  Política de uso y seguridad  |
+             Política
+            de privacidad y ley de datos personales</p>
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
